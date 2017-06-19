@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black2"
+>
+
+    <TextView
+        android:id="@+id/stack7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@color/black2"
+        android:fillViewport="true"
+        android:gravity="bottom|end"
+        android:scrollHorizontally="false"
+        android:textColor="@color/white3"
+        android:textSize="@dimen/stack"
+        android:textStyle="bold" android:typeface="monospace"
+        app:layout_constraintBottom_toTopOf="@+id/stack6"
+        android:layout_marginEnd="8dp"
+        tools:text="2.2"
+    />
+
+    <TextView
+        android:id="@+id/stack6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@color/black2"
+        android:fillViewport="true"
+        android:gravity="bottom|end"
+        android:scrollHorizontally="false"
+        android:textColor="@color/white3"
+        android:textSize="@dimen/stack"
+        android:textStyle="bold" android:typeface="monospace"
+        app:layout_constraintBottom_toTopOf="@+id/stack5"
+        android:layout_marginEnd="8dp"
+        tools:text="2.2"
+    />
+    <TextView
+        android:id="@+id/stack5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@color/black2"
+        android:fillViewport="true"
+        android:gravity="bottom|end"
+        android:scrollHorizontally="false"
+        android:textColor="@color/white3"
+        android:textSize="@dimen/stack"
+        android:textStyle="bold" android:typeface="monospace"
+        app:layout_constraintBottom_toTopOf="@+id/stack4"
+        android:layout_marginEnd="8dp"
+        tools:text="2.2"
+    />
+    <TextView
+        android:id="@+id/stack4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@color/black2"
+        android:fillViewport="true"
+        android:gravity="bottom|end"
+        android:scrollHorizontally="false"
+        android:textColor="@color/white3"
+        android:textSize="@dimen/stack"
+        android:textStyle="bold" android:typeface="monospace"
+        app:layout_constraintBottom_toTopOf="@+id/stack3"
+        android:layout_marginEnd="8dp"
+        tools:text="2.2"
+    />
+
+    <TextView
+        android:id="@+id/stack3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@color/black2"
+        android:fillViewport="true"
+        android:gravity="bottom|end"
+        android:scrollHorizontally="false"
+        android:textColor="@color/white3"
+        android:textSize="@dimen/stack"
+        android:textStyle="bold" android:typeface="monospace"
+        app:layout_constraintBottom_toTopOf="@+id/stack2"
+        android:layout_marginEnd="8dp"
+        tools:text="2.2"
+    />
+
+    <TextView
+        android:id="@+id/stack2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@color/black2"
+        android:fillViewport="true"
+        android:gravity="bottom|end"
+        android:scrollHorizontally="false"
+        android:textColor="@color/white3"
+        android:textSize="@dimen/stack"
+        android:textStyle="bold" android:typeface="monospace"
+        app:layout_constraintBottom_toTopOf="@+id/stack1"
+        android:layout_marginEnd="8dp"
+        tools:text="2.2"
+    />
+
+    <TextView
+        android:id="@+id/stack1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@color/black2"
+        android:fillViewport="true"
+        android:gravity="bottom|end"
+        android:scrollHorizontally="false"
+        android:textColor="@color/white3"
+        android:textSize="@dimen/stack"
+        android:textStyle="bold" android:typeface="monospace"
+        app:layout_constraintBottom_toTopOf="@+id/stack0"
+        android:layout_marginEnd="8dp"
+        tools:text="1.1"
+    />
+
+    <TextView
+        android:id="@+id/stack0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@color/black2"
+        android:fillViewport="true"
+        android:gravity="bottom|end"
+        android:scrollHorizontally="false"
+        android:textColor="@color/white3"
+        android:textSize="@dimen/stack"
+        android:textStyle="bold" android:typeface="monospace"
+        app:layout_constraintBottom_toTopOf="@+id/buffer"
+        android:layout_marginEnd="8dp"
+        tools:text="0.1"
+    />
+
+    <TextView
+        android:id="@+id/buffer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@color/black2"
+        android:fillViewport="true"
+        android:gravity="bottom|end"
+        android:scrollHorizontally="false"
+        android:textColor="@color/orange5"
+        android:textSize="@dimen/stack"
+        android:textStyle="bold" android:typeface="monospace"
+        app:layout_constraintBottom_toTopOf="@+id/keyboard"
+        android:layout_marginEnd="8dp"
+        tools:text="0.1"
+    />
+
+    <include
+        layout="@layout/keyboard_img"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:id="@+id/keyboard"
+
+        tools:layout_editor_absoluteX="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="stack">38sp</dimen>
+    <dimen name="stack_big">48sp</dimen>
+
+</resources>
