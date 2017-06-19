@@ -2,9 +2,9 @@ build
 bin
 gen
 libs
-*~
 *.cfg
 *.idea
+*~
 *.iml
 *.pro
 *.apk
