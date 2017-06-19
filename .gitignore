@@ -10,12 +10,9 @@ gen
 logcat
 lint.xml
 .gradle
-gradle
 build
-proguard
 .idea
 *.iml
-.gradle
 *.pro
 *.apk
 *.iml
