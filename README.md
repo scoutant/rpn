@@ -2,6 +2,9 @@
 
 ![RPN](http://scoutant.org/rpn_60_60_24_7.png)
 
+*Demo on PlayStore : https://play.google.com/store/apps/details?id=org.scoutant.rpn.*
+
+
 Very easy to use **RPN Calculator** for Android device. Neat and simple, yet powerful for everyday use. 
 
 Do remember that with __Reverse Polish Notation__ you first type the numbers and you finish with the operator. See https://en.wikipedia.org/wiki/Reverse_Polish_notation.
@@ -23,7 +26,6 @@ Hosted on http://github.com/scoutant/rpn. Visit _http://scoutant.org_.
 
 In addition to Kotlin we experiment here another new feature : _VectorDrawable_. The icons and authored with Inkscape and we converted to Android vector drawable xml format with following converter : http://a-student.github.io/SvgToVectorDrawableConverter.Web
 
-You can download app directly on PlayStore : https://play.google.com/store/apps/details?id=org.scoutant.rpn.
 
 Or you may prefer F-Droid repository : https://f-droid.org/repository/browse/?fdfilter=blokish&fdid=org.scoutant.rpn
 
