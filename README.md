@@ -11,7 +11,7 @@ Do remember that with __Reverse Polish Notation__ you first type the numbers and
 
 For example, _how many hour in a week?_ :
 
-24 7 +
+24 7 *
 
 
 You may appreciate the Undo feature.
@@ -27,7 +27,7 @@ Hosted on http://github.com/scoutant/rpn. Visit _http://scoutant.org_.
 In addition to Kotlin we experiment here another new feature : _VectorDrawable_. The icons and authored with Inkscape and we converted to Android vector drawable xml format with following converter : http://a-student.github.io/SvgToVectorDrawableConverter.Web
 
 
-Or you may prefer F-Droid repository : https://f-droid.org/repository/browse/?fdfilter=blokish&fdid=org.scoutant.rpn
+Or you may prefer F-Droid repository : https://f-droid.org/wiki/page/org.scoutant.rpn
 
 
 # Version history
