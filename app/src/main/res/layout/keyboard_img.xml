@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.percent.PercentRelativeLayout
+<androidx.percentlayout.widget.PercentRelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="300dp"
@@ -9,7 +9,7 @@
 
     <!-- svg to vector drawable converter : http://a-student.github.io/SvgToVectorDrawableConverter.Web -->
 
-    <android.support.percent.PercentRelativeLayout
+    <androidx.percentlayout.widget.PercentRelativeLayout
         app:layout_widthPercent="20%"
         app:layout_heightPercent="100%"
         android:id="@+id/C1"
@@ -57,9 +57,9 @@
             <!--android:layout_below="@id/enter"-->
             <!--android:background="@color/orange5"-->
         <!--/>-->
-    </android.support.percent.PercentRelativeLayout>
+    </androidx.percentlayout.widget.PercentRelativeLayout>
 
-    <android.support.percent.PercentRelativeLayout
+    <androidx.percentlayout.widget.PercentRelativeLayout
         app:layout_widthPercent="20%"
         app:layout_heightPercent="100%"
         android:id="@+id/C2"
@@ -112,9 +112,9 @@
             app:layout_heightPercent="20%"
             android:layout_below="@id/k1"
         />
-    </android.support.percent.PercentRelativeLayout>
+    </androidx.percentlayout.widget.PercentRelativeLayout>
 
-    <android.support.percent.PercentRelativeLayout
+    <androidx.percentlayout.widget.PercentRelativeLayout
         app:layout_widthPercent="20%"
         app:layout_heightPercent="100%"
         android:id="@+id/C3"
@@ -167,9 +167,9 @@
             app:layout_heightPercent="20%"
             android:layout_below="@id/k2"
         />
-    </android.support.percent.PercentRelativeLayout>
+    </androidx.percentlayout.widget.PercentRelativeLayout>
 
-    <android.support.percent.PercentRelativeLayout
+    <androidx.percentlayout.widget.PercentRelativeLayout
         app:layout_widthPercent="20%"
         app:layout_heightPercent="100%"
         android:id="@+id/C4"
@@ -218,9 +218,9 @@
             app:layout_heightPercent="20%"
             android:layout_below="@id/k3"
         />
-    </android.support.percent.PercentRelativeLayout>
+    </androidx.percentlayout.widget.PercentRelativeLayout>
 
-    <android.support.percent.PercentRelativeLayout
+    <androidx.percentlayout.widget.PercentRelativeLayout
         app:layout_widthPercent="20%"
         app:layout_heightPercent="100%"
         android:id="@+id/C5"
@@ -267,6 +267,6 @@
             app:layout_heightPercent="20%"
             android:layout_below="@id/subtract"
         />
-    </android.support.percent.PercentRelativeLayout>
+    </androidx.percentlayout.widget.PercentRelativeLayout>
 
-</android.support.percent.PercentRelativeLayout>
+</androidx.percentlayout.widget.PercentRelativeLayout>

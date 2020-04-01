@@ -1,7 +1,7 @@
 package org.scoutant.rpn
 
 import android.content.Context
-import android.preference.PreferenceManager
+import androidx.preference.PreferenceManager
 
 class State ( context: Context){
     private val prefs = PreferenceManager.getDefaultSharedPreferences(context)
@@ -14,7 +14,7 @@ class State ( context: Context){
         return save( CACHE, list)
     }
     fun cache() : String {
-        return prefs.getString( CACHE, "")
+        return prefs.getString( CACHE, "") ?: ""
     }
 
     private fun save( key:String, value: String) : State {

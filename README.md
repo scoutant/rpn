@@ -4,8 +4,6 @@
 
 <a href="https://f-droid.org/packages/org.scoutant.rpn" target="_blank">
 <img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="100"/></a>
-<a href="https://play.google.com/store/apps/details?id=org.scoutant.rpn" target="_blank">
-<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" height="100"/></a>
 
 Very easy to use **RPN Calculator** for Android device. Neat and simple, yet powerful for everyday use. 
 
@@ -29,6 +27,12 @@ Hosted on http://github.com/scoutant/rpn. Visit _http://scoutant.org_.
 In addition to Kotlin we experiment here another new feature : _VectorDrawable_. The icons and authored with Inkscape and we converted to Android vector drawable xml format with following converter : http://a-student.github.io/SvgToVectorDrawableConverter.Web
 
 # Version history
+
+## 1.2 2020/04 Android 10 and AndroidX Jetpack refactoring
+
+and Github CI test and build
+
+## 1.1 2018/10 Android 9
 
 ## 1.0 2017/06
 
