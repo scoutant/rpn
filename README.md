@@ -1,6 +1,6 @@
 # RPN Calculator
 
-![RPN](http://scoutant.org/rpn_60_60_24_7.png)
+![RPN](http://scoutant.org/rpn_60_60_24_7_pixel_40p.png)
 
 <a href="https://f-droid.org/packages/org.scoutant.rpn" target="_blank">
 <img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="100"/></a>
@@ -28,11 +28,15 @@ In addition to Kotlin we experiment here another new feature : _VectorDrawable_.
 
 # Version history
 
-## 1.2 2020/04 Android 10 and AndroidX Jetpack refactoring
+## 1.2 2020/04 Android 10 
 
-and Github CI test and build
+- Android 10
+- AndroidX Jetpack refactoring
+- Github CI test and build
 
 ## 1.1 2018/10 Android 9
+
+- Android 9
 
 ## 1.0 2017/06
 
