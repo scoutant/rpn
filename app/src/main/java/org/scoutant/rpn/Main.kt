@@ -1,6 +1,7 @@
 package org.scoutant.rpn
 
 import android.app.Activity
+import android.content.res.Configuration
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -128,4 +129,9 @@ class Main : Activity(), Update {
             .show()
     }
 
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        Log.d("orientation", "onConfigurationChanged, ${newConfig.orientation}")
+        super.onConfigurationChanged(newConfig)
+
+    }
 }
