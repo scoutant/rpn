@@ -1,6 +1,7 @@
 package org.scoutant.rpn
 
 import android.app.Activity
+import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
 import android.util.Log
@@ -62,23 +63,23 @@ class Main : Activity(), Update {
         buffer.reset()
     }
 
-    fun digit( v: View) {
+    fun digit(@Suppress("UNUSED_PARAMETER") v: View) {
         val digit:String = v.tag as String
-        Log.d("keyboard", "digit : " + digit)
+        Log.d("keyboard", "digit : $digit")
         buffer.append( digit)
         update()
     }
 
     /** validates the buffer or duplicate topmost stack item if empty buffer */
-    fun enter(v: View) {
+    fun enter(@Suppress("UNUSED_PARAMETER") v: View) {
         if (buffer.isEmpty()) calculator.dup()
         else push()
         update()
     }
 
     // 1-operand operations
-    fun drop(v: View)   { push(); calculator.drop(); update(); }
-    fun sqrt(v:View) {
+    fun drop(@Suppress("UNUSED_PARAMETER") v: View)   { push(); calculator.drop(); update(); }
+    fun sqrt(@Suppress("UNUSED_PARAMETER") v:View) {
         push()
         try {
             calculator.sqrt()
@@ -87,8 +88,8 @@ class Main : Activity(), Update {
             toast( "Only for positive numbers.")
         }
     }
-    fun negate(v:View) { push(); calculator.negate(); update(); }
-    fun reciprocal(v:View) {
+    fun negate(@Suppress("UNUSED_PARAMETER") v:View) { push(); calculator.negate(); update(); }
+    fun reciprocal(@Suppress("UNUSED_PARAMETER") v:View) {
         push()
         try {
             calculator.reciprocal()
@@ -99,11 +100,11 @@ class Main : Activity(), Update {
     }
 
     // 2-operand operations
-    fun swap(v: View)   { push(); calculator.swap(); update(); }
-    fun add(v: View)    { push(); calculator.add(); update(); }
-    fun subtract(v: View) { push(); calculator.subtract(); update(); }
-    fun multiply(v: View) { push(); calculator.multiply(); update(); }
-    fun divide(v: View) {
+    fun swap(@Suppress("UNUSED_PARAMETER") v: View)   { push(); calculator.swap(); update(); }
+    fun add(@Suppress("UNUSED_PARAMETER") v: View)    { push(); calculator.add(); update(); }
+    fun subtract(@Suppress("UNUSED_PARAMETER") v: View) { push(); calculator.subtract(); update(); }
+    fun multiply(@Suppress("UNUSED_PARAMETER") v: View) { push(); calculator.multiply(); update(); }
+    fun divide(@Suppress("UNUSED_PARAMETER") v: View) {
         push()
         try {
             calculator.divide()
@@ -112,14 +113,14 @@ class Main : Activity(), Update {
             toast( "Division by zero.")
         }
     }
-    fun power(v: View) { push(); calculator.power(); update(); }
+    fun power(@Suppress("UNUSED_PARAMETER") v: View) { push(); calculator.power(); update(); }
 
     // buffer operations
-    fun delete(v: View) { buffer.delete(); update(); }
-    fun dot(v: View)    { buffer.dot(); update(); }
+    fun delete(@Suppress("UNUSED_PARAMETER") v: View) { buffer.delete(); update(); }
+    fun dot(@Suppress("UNUSED_PARAMETER") v: View)    { buffer.dot(); update(); }
 
     // other
-    fun undo(v: View) {
+    fun undo(@Suppress("UNUSED_PARAMETER") v: View) {
         calculator = Calculator( previous)
         update()
     }
@@ -130,8 +131,8 @@ class Main : Activity(), Update {
     }
 
     override fun onConfigurationChanged(newConfig: Configuration) {
-        Log.d("orientation", "onConfigurationChanged, ${newConfig.orientation}")
         super.onConfigurationChanged(newConfig)
-
+        this.finish()
+        startActivity( Intent( this, this.javaClass))
     }
 }

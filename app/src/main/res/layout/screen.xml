@@ -154,18 +154,9 @@
         android:textColor="@color/orange5"
         android:textSize="@dimen/stack"
         android:textStyle="bold" android:typeface="monospace"
-        app:layout_constraintBottom_toTopOf="@+id/keyboard"
         android:layout_marginEnd="8dp"
         tools:text="0.1"
-    />
-
-    <include
-        layout="@layout/keyboard_img"
-        android:layout_width="0dp"
-        android:layout_height="300dp"
-        android:id="@+id/keyboard"
-
-        tools:layout_editor_absoluteX="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

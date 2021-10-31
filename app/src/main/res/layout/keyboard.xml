@@ -7,6 +7,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     >
 
+    <!-- svg to vector drawable converter : http://a-student.github.io/SvgToVectorDrawableConverter.Web -->
+
     <androidx.percentlayout.widget.PercentRelativeLayout
         app:layout_widthPercent="20%"
         app:layout_heightPercent="100%"
@@ -36,24 +38,25 @@
             app:layout_heightPercent="20%"
             android:layout_below="@id/swap"
         />
-        <TextView
-            android:text="" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
+        <ImageView
+            android:src="@drawable/enter"
+            android:gravity="center" android:textSize="20sp" android:textStyle="bold"
             android:id="@+id/enter"
             android:onClick="enter"
             android:layout_width="match_parent"
-            app:layout_heightPercent="20%"
+            app:layout_heightPercent="40%"
             android:layout_below="@id/drop"
-            android:background="@color/orange5"
+            android:scaleType="fitXY"
         />
-        <TextView
-            android:text="" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
-            android:id="@+id/enter2"
-            android:onClick="enter"
-            android:layout_width="match_parent"
-            app:layout_heightPercent="20%"
-            android:layout_below="@id/enter"
-            android:background="@color/orange5"
-        />
+        <!--<TextView-->
+            <!--android:text="" android:gravity="center" android:textSize="20sp" android:textStyle="bold"-->
+            <!--android:id="@+id/enter2"-->
+            <!--android:onClick="enter"-->
+            <!--android:layout_width="match_parent"-->
+            <!--app:layout_heightPercent="20%"-->
+            <!--android:layout_below="@id/enter"-->
+            <!--android:background="@color/orange5"-->
+        <!--/>-->
     </androidx.percentlayout.widget.PercentRelativeLayout>
 
     <androidx.percentlayout.widget.PercentRelativeLayout
@@ -63,15 +66,18 @@
         android:orientation="vertical"
         android:layout_toRightOf="@id/C1"
         >
-        <TextView
-            android:text="+/-" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
+        />
+        <ImageView
+            android:src="@drawable/negate"
+            android:gravity="center" android:textSize="20sp" android:textStyle="bold"
             android:id="@+id/negate"
             android:onClick="negate"
             android:layout_width="match_parent"
             app:layout_heightPercent="20%"
         />
-        <TextView
-            android:text="7" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
+        <ImageView
+            android:src="@drawable/digit_7"
+            android:gravity="center" android:textSize="20sp" android:textStyle="bold"
             android:id="@+id/k7"
             android:tag="7"
             android:onClick="digit"
@@ -79,8 +85,8 @@
             app:layout_heightPercent="20%"
             android:layout_below="@id/negate"
         />
-        <TextView
-            android:text="4" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
+        <ImageView
+            android:src="@drawable/digit_4"
             android:id="@+id/k4"
             android:tag="4"
             android:onClick="digit"
@@ -88,8 +94,9 @@
             app:layout_heightPercent="20%"
             android:layout_below="@id/k7"
         />
-        <TextView
-            android:text="1" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
+        <ImageView
+            android:src="@drawable/digit_1"
+            android:gravity="center" android:textSize="20sp" android:textStyle="bold"
             android:id="@+id/k1"
             android:tag="1"
             android:onClick="digit"
@@ -114,15 +121,16 @@
         android:orientation="vertical"
         android:layout_toRightOf="@id/C2"
     >
-        <TextView
-            android:text="1/x" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
+        <ImageView
+            android:src="@drawable/reciprocal" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
             android:id="@+id/reciprocal"
             android:onClick="reciprocal"
             android:layout_width="match_parent"
             app:layout_heightPercent="20%"
         />
-        <TextView
-            android:text="8" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
+        <ImageView
+            android:src="@drawable/digit_8"
+            android:gravity="center" android:textSize="20sp" android:textStyle="bold"
             android:id="@+id/k8"
             android:tag="8"
             android:onClick="digit"
@@ -130,17 +138,18 @@
             app:layout_heightPercent="20%"
             android:layout_below="@id/reciprocal"
         />
-        <TextView
-            android:text="5" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
+        <ImageView
+            android:gravity="center" android:textSize="20sp" android:textStyle="bold"
             android:id="@+id/k5"
             android:tag="5"
             android:onClick="digit"
             android:layout_width="match_parent"
             app:layout_heightPercent="20%"
             android:layout_below="@id/k8"
+            android:src="@drawable/digit_5"
         />
-        <TextView
-            android:text="2" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
+        <ImageView
+            android:src="@drawable/digit_2"
             android:id="@+id/k2"
             android:tag="2"
             android:onClick="digit"
@@ -148,8 +157,9 @@
             app:layout_heightPercent="20%"
             android:layout_below="@id/k5"
         />
-        <TextView
-            android:text="0" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
+        <ImageView
+            android:src="@drawable/digit_0"
+            android:gravity="center" android:textSize="20sp" android:textStyle="bold"
             android:id="@+id/k0"
             android:tag="0"
             android:onClick="digit"
@@ -166,15 +176,15 @@
         android:orientation="vertical"
         android:layout_toRightOf="@id/C3"
     >
-        <TextView
-            android:text="sqrt" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
+        <ImageView
+            android:src="@drawable/sqrt" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
             android:id="@+id/sqrt"
             android:onClick="sqrt"
             android:layout_width="match_parent"
             app:layout_heightPercent="20%"
         />
-        <TextView
-            android:text="9" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
+        <ImageView
+            android:src="@drawable/digit_9" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
             android:id="@+id/k9"
             android:tag="9"
             android:onClick="digit"
@@ -182,8 +192,8 @@
             app:layout_heightPercent="20%"
             android:layout_below="@id/sqrt"
         />
-        <TextView
-            android:text="6" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
+        <ImageView
+            android:src="@drawable/digit_6" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
             android:id="@+id/k6"
             android:tag="6"
             android:onClick="digit"
@@ -191,8 +201,8 @@
             app:layout_heightPercent="20%"
             android:layout_below="@id/k9"
         />
-        <TextView
-            android:text="3" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
+        <ImageView
+            android:src="@drawable/digit_3"
             android:id="@+id/k3"
             android:tag="3"
             android:onClick="digit"
@@ -200,8 +210,8 @@
             app:layout_heightPercent="20%"
             android:layout_below="@id/k6"
         />
-        <TextView
-            android:text="." android:gravity="center" android:textSize="20sp" android:textStyle="bold"
+        <ImageView
+            android:src="@drawable/dot" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
             android:id="@+id/dot"
             android:onClick="dot"
             android:layout_width="match_parent"
@@ -217,39 +227,40 @@
         android:orientation="vertical"
         android:layout_toRightOf="@id/C4"
     >
-        <TextView
-            android:text="xn" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
+        <ImageView
+            android:src="@drawable/exp" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
             android:id="@+id/power"
             android:onClick="power"
             android:layout_width="match_parent"
             app:layout_heightPercent="20%"
         />
-        <TextView
-            android:text="/" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
+        <ImageView
+            android:src="@drawable/divide" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
             android:id="@+id/divide"
             android:onClick="divide"
             android:layout_width="match_parent"
             app:layout_heightPercent="20%"
             android:layout_below="@id/power"
         />
-        <TextView
-            android:text="x" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
+        <ImageView
+            android:src="@drawable/cross" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
             android:id="@+id/multiply"
             android:onClick="multiply"
             android:layout_width="match_parent"
             app:layout_heightPercent="20%"
             android:layout_below="@id/divide"
         />
-        <TextView
-            android:text="-" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
+        <ImageView
+            android:src="@drawable/minus" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
             android:id="@+id/subtract"
             android:onClick="subtract"
             android:layout_width="match_parent"
             app:layout_heightPercent="20%"
             android:layout_below="@id/multiply"
         />
-        <TextView
-            android:text="+" android:gravity="center" android:textSize="20sp" android:textStyle="bold"
+        <ImageView
+            android:src="@drawable/plus"
+            android:gravity="center" android:textSize="20sp" android:textStyle="bold"
             android:id="@+id/add"
             android:onClick="add"
             android:layout_width="match_parent"
