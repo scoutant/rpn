@@ -28,10 +28,12 @@ In addition to Kotlin we experiment here another new feature : _VectorDrawable_.
 
 ## 1.3 2021/10 Android 12
 
+- Landscape mode
+- Reverse portrait mode (issue #10)  
+- Vibrator effects
 - Android 12
 - Gradle 7
 - Kotlin 1.5
-
 
 ## 1.2 2020/04 Android 10 
 
