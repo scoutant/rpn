@@ -18,15 +18,20 @@ You may appreciate the Undo feature.
 
 Source code is written **Kotlin** as alternative to Java.
 
-You'll need Gradle 4 and Android O to build the app. You'll need Android Studio 3.0 alpha to edit this Kotlin app.
-
-Source code licensed under the GNU Public License, Version 3 or later. Improvements are welcome.
+Source code licensed under the GNU Public License, Version 3. Improvements are welcome.
 
 Hosted on http://github.com/scoutant/rpn. Visit _http://scoutant.org_.
 
 In addition to Kotlin we experiment here another new feature : _VectorDrawable_. The icons and authored with Inkscape and we converted to Android vector drawable xml format with following converter : http://a-student.github.io/SvgToVectorDrawableConverter.Web
 
 # Version history
+
+## 1.3 2021/10 Android 12
+
+- Android 12
+- Gradle 7
+- Kotlin 1.5
+
 
 ## 1.2 2020/04 Android 10 
 

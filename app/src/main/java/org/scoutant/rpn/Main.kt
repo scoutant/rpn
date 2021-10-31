@@ -5,9 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.TextView
-import orange.com.mykotlin.Buffer
-import orange.com.mykotlin.Calculator
-import org.jetbrains.anko.toast
+import android.widget.Toast
 
 class Main : Activity(), Update {
 
@@ -123,6 +121,11 @@ class Main : Activity(), Update {
     fun undo(v: View) {
         calculator = Calculator( previous)
         update()
+    }
+
+    fun toast(msg:String) {
+        Toast.makeText(this, msg, Toast.LENGTH_LONG)
+            .show()
     }
 
 }

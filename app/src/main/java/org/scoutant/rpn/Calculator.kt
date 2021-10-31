@@ -1,6 +1,5 @@
-package orange.com.mykotlin
+package org.scoutant.rpn
 
-import org.scoutant.rpn.BigDecimalUtils
 import org.scoutant.rpn.BigDecimalUtils.approxPow
 import java.math.BigDecimal
 import java.math.MathContext
