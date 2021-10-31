@@ -5,6 +5,7 @@ class Buffer {
     private var buffer = StringBuilder( 32)
 
     fun isEmpty() : Boolean = buffer.isEmpty()
+    fun isNotEmpty() = !isEmpty()
 
     fun reset() = buffer.setLength(0)
 

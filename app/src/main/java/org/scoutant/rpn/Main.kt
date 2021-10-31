@@ -1,9 +1,12 @@
 package org.scoutant.rpn
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
+import android.os.VibrationEffect
+import android.os.Vibrator
 import android.util.Log
 import android.view.View
 import android.widget.TextView
@@ -19,12 +22,15 @@ class Main : Activity(), Update {
     private val ids = listOf( R.id.stack0, R.id.stack1, R.id.stack2, R.id.stack3, R.id.stack4, R.id.stack5, R.id.stack6, R.id.stack7 )
     private var svs : Array<TextView?> = arrayOfNulls(ids.size)
 
+    lateinit var vibrator:Vibrator
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main)
         bv = findViewById<TextView> (R.id.buffer) // buffer view
 //        for (i in  0..ids.size-1) svs[i] = this.findViewById( ids[i]) as TextView?
         for (i in  0..ids.size-1) svs[i] = findViewById<TextView>( ids[i])
+        vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator // use VibratorManager with Android 12
     }
 
     override fun onResume() {
@@ -58,6 +64,7 @@ class Main : Activity(), Update {
 
     /** pushes the buffer onto the stack if not empty */
     fun push() {
+        vibrate()
         if (buffer.isEmpty()) return
         calculator.push( buffer.get())
         buffer.reset()
@@ -67,12 +74,16 @@ class Main : Activity(), Update {
         val digit:String = v.tag as String
         Log.d("keyboard", "digit : $digit")
         buffer.append( digit)
+        vibrate_short()
         update()
     }
 
     /** validates the buffer or duplicate topmost stack item if empty buffer */
     fun enter(@Suppress("UNUSED_PARAMETER") v: View) {
-        if (buffer.isEmpty()) calculator.dup()
+        if (buffer.isEmpty()) {
+            calculator.dup()
+            vibrate()
+        }
         else push()
         update()
     }
@@ -116,12 +127,17 @@ class Main : Activity(), Update {
     fun power(@Suppress("UNUSED_PARAMETER") v: View) { push(); calculator.power(); update(); }
 
     // buffer operations
-    fun delete(@Suppress("UNUSED_PARAMETER") v: View) { buffer.delete(); update(); }
-    fun dot(@Suppress("UNUSED_PARAMETER") v: View)    { buffer.dot(); update(); }
+    fun delete(@Suppress("UNUSED_PARAMETER") v: View) {
+        if (buffer.isNotEmpty()) vibrate_short()
+        buffer.delete()
+        update()
+    }
+    fun dot(@Suppress("UNUSED_PARAMETER") v: View)    { vibrate_short(); buffer.dot(); update(); }
 
     // other
     fun undo(@Suppress("UNUSED_PARAMETER") v: View) {
         calculator = Calculator( previous)
+        vibrate()
         update()
     }
 
@@ -135,4 +151,15 @@ class Main : Activity(), Update {
         this.finish()
         startActivity( Intent( this, this.javaClass))
     }
+
+    fun vibrate_short() {
+        vibrator.vibrate( VibrationEffect.createWaveform(longArrayOf(20,20 ), intArrayOf(120, 80), -1))
+        // vibrator.vibrate(VibrationEffect.EFFECT_DOUBLE_CLICK) // with Android 10+
+    }
+
+    fun vibrate() {
+        vibrator.vibrate( VibrationEffect.createWaveform(longArrayOf(60,60 ), intArrayOf(180, 100), -1))
+        // vibrator.vibrate(VibrationEffect.EFFECT_DOUBLE_CLICK) // with Android 10+
+    }
+
 }
