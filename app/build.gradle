@@ -35,6 +35,11 @@ android {
       minifyEnabled false
     }
   }
+  
+  lintOptions {
+    checkReleaseBuilds false
+    abortOnError false
+  }
 }
 
 dependencies {
